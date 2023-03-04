@@ -1,0 +1,42 @@
+.container {
+    background-color: pink;
+    display: block;
+    width: 60vw;
+    height: 50vh;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+}
+
+.row1 {
+    column-gap: 10px;
+    grid-template-columns: 6fr repeat(3, 2fr);
+}
+
+.row2 {
+    column-gap: 10px;
+    grid-template-columns: 9fr 3fr;        
+    margin-top : 10px;
+}
+
+.col-1-row-2 {
+    row-gap: 10px;
+    grid-template-rows: 2fr 10fr;
+}
+
+.col-2-row-2 {
+    row-gap: 10px;
+    grid-template-rows: repeat(3, 2fr);
+}
+
+.main-content-wrapper {
+    row-gap: 10px;
+    grid-template-rows: 4fr 8fr;
+}
+
+.post-meta-wrapper {
+    grid-template-columns: 3fr 9fr;
+    column-gap: 10px;
+}

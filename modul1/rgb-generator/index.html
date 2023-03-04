@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3 class="text-center">RGB GENERATOR</h1>
+
+        <div class="result-container">
+            <p class="text-center">Result: </p>
+            <div class="result-code">
+                <p>rgb(<span class="red">0</span>,<span class="green">0</span>,<span class="blue">0</span>)</p>
+            </div>
+            <br>
+            <label class="text-center" for="red">Red: </label>
+            <input class="form-input" type="range" name="red" id="red" min="0" max="255" oninput="changeRed(this)">
+            <label class="text-center" for="green">Green: </label>
+            <input class="form-input" type="range" name="green" id="green" min="0" max="255" oninput="changeGreen(this)">
+            <label class="text-center" for="blue">Blue: </label>
+            <input class="form-input" type="range" name="blue" id="blue" min="0" max="255" oninput="changeBlue(this)">
+        </div>
+    </div>
+
+    <script>
+        function changeRed(e) {
+            const green = document.querySelector(".green").innerHTML
+            const blue = document.querySelector(".blue").innerHTML
+            const red = e.value
+            document.querySelector(".red").innerHTML = red
+            document.querySelector("body").style.backgroundColor = `rgb(${red},${green},${blue})`
+        }
+        function changeGreen(e) {
+            const green = e.value
+            const blue = document.querySelector(".blue").innerHTML
+            const red = document.querySelector(".red").innerHTML
+            document.querySelector(".green").innerHTML = green
+            document.querySelector("body").style.backgroundColor = `rgb(${red},${green},${blue})`
+        }
+        function changeBlue(e) {
+            const green = document.querySelector(".green").innerHTML
+            const blue = e.value
+            const red = document.querySelector(".red").innerHTML
+            document.querySelector(".blue").innerHTML = blue
+            document.querySelector("body").style.backgroundColor = `rgb(${red},${green},${blue})`
+        }
+    </script>
+</body>
+</html>

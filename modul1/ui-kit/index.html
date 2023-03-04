@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Kit Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="button-wrapper">
+            <button class="btn danger">
+                Button Danger
+            </button>
+            <button class="btn primary">
+                Button Primary
+            </button>
+            <button disabled class="btn disabled">
+                Button Disabled
+            </button>
+        </div>
+        <div class="button-wrapper">
+            <button class="btn outline-danger">
+                Button Danger
+            </button>
+            <button class="btn outline-primary">
+                Button Primary
+            </button>
+            <button disabled class="btn outline-disabled">
+                Button Disabled
+            </button>
+        </div>
+        <div class="button-wrapper">
+            <button class="btn btn-sm danger">
+                Button Danger
+            </button>
+            <button class="btn btn-sm outline-primary">
+                Button Danger
+            </button>
+        </div>
+        <div class="button-wrapper">
+            <input type="text" class="form-control" placeholder="please input">
+            <input type="text" class="form-control active" placeholder="active form">
+            <input type="text" class="form-control error active" placeholder="input error">
+        </div>
+        <div class="button-wrapper">
+            <select name="" id="" class="form-control outline-danger">
+                <option value="Dropdown">Dropdown</option>
+            </select>
+            <select name="" id="" class="form-control outline-primary">
+                <option value="Dropdown">Dropdown</option>
+            </select>
+        </div>
+        <div class="button-wrapper">
+            <div class="custom-checkbox">
+                <input type="checkbox" onchange="checkedCheckbox(this)">
+            </div>
+            <div class="custom-checkbox rounded">
+                <input type="checkbox" onchange="checkedCheckbox(this)">
+            </div>
+            <div class="tuker" onclick="switches(this)">
+            </div>
+            <div class="radio">
+                <input id="radio-1" name="radio" type="radio">
+                <label for="radio-1" class="radio-label"></label>
+            </div>
+            <div class="radio">
+                <input id="radio-2" name="radio" type="radio">
+                <label for="radio-2" class="radio-label"></label>
+            </div>
+            <div class="radio">
+                <input id="radio-3" name="radio" type="radio">
+                <label for="radio-3" class="radio-label"></label>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const checkedCheckbox = cb => {
+            if(cb.checked) {
+                cb.parentElement.classList.add("checked")
+            } else {
+                cb.parentElement.classList.remove("checked")
+            }
+        }
+
+        const switches = e => {
+            e.classList.toggle("active")
+        }
+    </script>
+</body>
+</html>
